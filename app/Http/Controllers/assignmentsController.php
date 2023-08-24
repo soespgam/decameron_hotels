@@ -46,7 +46,7 @@ class assignmentsController extends Controller
 
     public function create_assigment(Request $request)
     {
-        echo($request);
+        
         $id =$request->fk_hotel;
         $validateAssignment=$this->validate_type_assignment( $request->type_room ,$request->type_accommodation);
         $hotel_by_id= hotels::find($id);
